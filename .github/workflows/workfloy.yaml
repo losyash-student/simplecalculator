@@ -22,7 +22,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: add to dockerhub
-      uses: docker/build-push-actions@v5
+      uses: docker/build-push-actions@v3
       with:
         context: .
         push: true
