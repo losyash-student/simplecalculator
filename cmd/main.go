@@ -11,6 +11,10 @@ type Response struct {
 	Result int `json:"result"`
 }
 
+func summ(a, b int) int {
+	return a + b
+}
+
 func sumHandler(w http.ResponseWriter, r *http.Request) {
 	// Обрабатываем только POST-запросы
 	if r.Method != http.MethodPost {
@@ -34,7 +38,7 @@ func sumHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	res := Response{Result: a + b}
+	res := Response{Result: summ(a, b)}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(res)
 }
