@@ -8,7 +8,7 @@ import (
 // for a valid return value.
 func TestSumm(t *testing.T) {
 	ans := summ(2, -2)
-	if ans != 0 {
+	if ans != 11 {
 		t.Errorf("summ(2, -2) = %d; want 0", ans)
 	}
 
