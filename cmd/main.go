@@ -12,7 +12,7 @@ type Response struct {
 }
 
 func summ(a, b int) int {
-	return a + b
+	return a + b + 1
 }
 
 func sumHandler(w http.ResponseWriter, r *http.Request) {
